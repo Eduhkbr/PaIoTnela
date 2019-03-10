@@ -1,0 +1,10 @@
+CSS:
+
+afim de tornar o site responsivo com menos linhas de código, utilizar medidas escaláveis como:
+
+fontes:"em" ao invés de "px"
+
+height: "vh" ao invés de px ou até mesmo %
+width: "vw" ao invés  px ou até mesmo % 
+(ambos se baseiam no tamanho da tela que o usuário esta utilizando, sendo 100vh ou 100vw a medida que ocupa tela cheia)
+
