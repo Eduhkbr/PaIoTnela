@@ -1,0 +1,86 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 100vw);
+      grid-template-rows: repeat(4, 100vh);
+  grid-template-areas:
+  "slider"
+  "projeto"
+  "produto"
+  "grupo"
+}
+
+main h1 {
+  background: tomato;
+  width: 100%;
+  font-size: 2em;
+  max-height: 5vh;
+  padding: 1vh;
+
+}
+
+main h2 {
+  padding: 2vh;
+}
+
+.slider {
+  grid-area: slider;
+  background: #f08080;
+}
+
+/* AREA DE PROJETOS */
+.projeto {
+  grid-area: projeto;
+  background: #cd7f32;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caixa {
+  width: 50vw;
+  height: 50vh;
+}
+
+.arqcomp {
+  background: #b8860b;
+}
+
+.alg {
+  background: #87cefa;
+
+}
+
+.bd {
+  background: #cd7f32;
+
+}
+
+.outros {
+  background: #f08080;
+
+}
+
+/* AREA SOBRE O PRODUTO */
+
+.produto {
+  grid-area: produto;
+  background: #b8860b;
+  min-width: 50vw;
+  min-height: 50vh;
+}
+
+/* AREA SOBRE O GRUPO */
+.grupo {
+  grid-area: grupo;
+  background: #87cefa;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+}
+
+.membro {
+}
+
+.foto {
+  border-radius: 50%;
+}
