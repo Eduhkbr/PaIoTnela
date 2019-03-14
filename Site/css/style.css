@@ -184,7 +184,7 @@ input[type="button"]:hover{
       background-color: #ccc;
     }
   
-    .control-nav { /* label icon */
+    .control-nav {
       position: absolute;
       right: 20px;
       top: 20px;
@@ -250,3 +250,4 @@ input[type="button"]:hover{
       line-height: 40px;
     }
   }
+}
