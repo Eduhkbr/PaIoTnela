@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    
+    <form>
+        Tempo em minutos: <input type="number" id="tempo"><br>
+        Preço do botijão: <input type="number" id="precoBotijao"><br>
+        <Select id="botijao">
+            <option value="">-Selecione o peso do Gás-</option>
+            <option value="13"> 13KG </option>
+            <option value="20"> 20KG </option>
+            <option value="45"> 45KG </option>
+            <option value="90"> 90KG </option>
+        </Select><br>
+    </form><br>
+    <button type="button" onclick="calculo()"> Calcular valores </button>
+    <br><br>
+    <div id="mostrar"></div>
+    
+</body>
+</html>
+
+
+<script>
+
+    function calculo() {
+        /*Tempo do fogo ligado em minutos*/
+        var tempoLig = tempo.value;
+        /*Preco do botijão*/
+        var pb = precoBotijao.value;
+        /*Peso do botijão*/
+        var b = botijao.value;
+        // formula para calcular o gasto cozinhando com gás
+        var calculoDinheiro = (((tempoLig/60)*0.225)/b)* pb;
+        // calculo do gasto com panela eletrica
+        var valorEletrico = calculoDinheiro/2;
+        // tempo economizado com panela eletrica
+        tempoLig = tempoLig - (tempoLig/3);
+        // envio de dados para uma div chamada 'mostrar'
+        mostrar.innerHTML = `Você gasta R$${calculoDinheiro.toFixed(2)} dentro dessas condições,
+         com a panela eletrica gastaria aprox. R$${valorEletrico.toFixed(2)} e gastaria apenas ${tempoLig} minutos.`;
+    }
+
+</script>
