@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/simulador.css">
     <title>Simulador Financeiro</title>
 </head>
 <body>
-    
+    <dir class="mesa">
+    <div class="auxilio">
     <form>
-        Tempo em minutos: <input type="number" id="tempo"><br>
-        Preço do botijão: <input type="number" id="precoBotijao"><br>
+        <p>Tempo em minutos: </p><input type="number" id="tempo" class="simuladorinput"><br>
+        <p>Preço do botijão: </p><input type="number" id="precoBotijao" class="simuladorinput"><br>
         <Select id="botijao">
             <option value="">-Selecione o peso do Gás-</option>
             <option value="13"> 13KG </option>
@@ -19,10 +21,11 @@
             <option value="90"> 90KG </option>
         </Select><br>
     </form><br>
-    <button type="button" onclick="calculo()"> Calcular valores </button>
+    <button type="button" onclick="calculo()" class="simuladorbt"> Calcular valores </button>
     <br><br>
-    <div id="mostrar"></div>
-    
+    </div>
+    <div id="mostrar" class="texto"> ddidihdiidhiudhiduhdisudhiudhaidahdisahdiasuhidsau</div>
+    </dir>
 </body>
 </html>
 
@@ -43,8 +46,8 @@
         // tempo economizado com panela eletrica
         tempoLig = tempoLig - (tempoLig/3);
         // envio de dados para uma div chamada 'mostrar'
-        mostrar.innerHTML = `Você gasta R$${calculoDinheiro.toFixed(2)} dentro dessas condições,
-         com a panela eletrica gastaria aprox. R$${valorEletrico.toFixed(2)} e gastaria apenas ${tempoLig} minutos.`;
+        mostrar.innerHTML = `<div class="divM">Você gasta R$${calculoDinheiro.toFixed(2)} dentro dessas condições,
+         com a panela eletrica gastaria aprox. </div><div class="divT"> R$${valorEletrico.toFixed(2)} e gastaria apenas ${tempoLig} minutos.</div>`;
     }
 
 </script>

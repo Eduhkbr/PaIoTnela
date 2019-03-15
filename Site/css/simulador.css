@@ -1,0 +1,48 @@
+.simuladorinput{
+margin: 1px;
+}
+select{
+
+}
+.simuladorbt{
+
+}
+.auxilio{
+	text-align: center;
+    position: relative;
+    border-width:2px;
+    right: :0px;
+    background-color: orange;
+    float: left;
+    width: 50%;
+    border-right-style: solid 2px black;
+}
+.texto{
+
+}
+.mesa{
+    display: table;
+    background-color: lightblue;
+    width: -webkit-fill-available;
+    margin: 0;
+}
+body{
+	margin: 0;
+}
+.divM{
+	    position:relative;
+    border-width:2px;
+    background-color: peachpuff;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.divT{ 
+    position:relative;
+    border-width:2px;
+    background-color: peachpuff;
+    float: left;
+    width: 50%;
+    text-align: center;
+
+}
