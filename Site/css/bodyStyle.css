@@ -4,6 +4,7 @@ main {
  grid-template-columns: repeat(4, 100vw);
  grid-template-rows: repeat(4, 100vh);
  align-items: center;
+ background: #87cefa;
  grid-template-areas:
  "slider"
  "projeto"
@@ -18,7 +19,6 @@ main h1 {
   font-size: 2em;
   max-height: 10vh;
   padding-left: 5%;
-
 }
 
 main h2 {
@@ -104,7 +104,7 @@ main h2 {
 /* AREA SOBRE O GRUPO */
 .grupo {
   grid-area: grupo;
-  background: #87cefa;
+  
 }
 
 .grupo ul {
@@ -128,7 +128,8 @@ main h2 {
   font-weight: 700;
 text-align: center;
 margin: 1vh;
-background: tomato;
+background: rgb(71, 99, 255);
+color: white;
 }
 
 .foto {
