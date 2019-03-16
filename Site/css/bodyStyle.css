@@ -30,27 +30,20 @@ main h2 {
 /* AREA DE PROJETOS */
 .projeto {
   grid-area: projeto;
-  background: #cd7f32;
-  display: flex;
-  flex-wrap: wrap;
-}
-/* caixa de itens da grid de projetos*/
-.caixa {
-  width: 50vw;
-  height: 50vh;
-}
-
-
-
-/* AREA DE PROJETOS */
-.projeto {
-  grid-area: projeto;
   width: 100%;
   background: #fafafa;
   display: flex;
   flex-wrap: wrap;
-}
 
+}
+/*grids da area de projetos*/
+.caixa {
+  border: 1px solid black;
+  overflow: hidden;
+  width: 49.5vw;
+  height: 50vh;
+}
+/*Comportamento do H2 dentro da classe projeto*/
 .projeto h2 {
   background: rgb(85, 176, 218);
   width: 100%;
@@ -61,12 +54,6 @@ main h2 {
   text-transform: uppercase;
 }
 
-.caixa {
-  border: 1px solid black;
-  overflow: hidden;
-  width: 49.5vw;
-  height: 50vh;
-}
 
 .caixa img {
 
