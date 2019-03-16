@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <!-- O site deve ser feito no estilo OnePage, que consiste em todo o conteúdo em apenas uma página -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,109 +10,135 @@
 
   <!-- Importação do CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/bodyStyle.css">
 
-<!-- Barra de navegação do site -->
-<header>
-  <!-- Posicionamento e setagem da logo -->
-<div class="logo">
-  <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-</div>
-  <!-- Posicionamento da lista de links do site -->
-  <nav>
-  <input type="checkbox" id="control-nav" />
-  <label for="control-nav" class="control-nav"></label>
-  <label for="control-nav" class="control-nav-close"></label>
-<ul>
-      <li><a href="index.html" title="Inicio"> Inicio </a></li>
-      <li><a href="#projeto" title="Projeto"> Projeto </a></li>
-      <li><a href="#produto" title="Produto"> Produto </a></li>
-      <li><a href="simulador.html" title="Simulador"> Simulador </a></li>
-      <li><a href="login.html" title="Login"> Login </a></li>
-      <li><a href="cadastro.html" title="Cadastro"> Cadastro </a></li>
-      <li><a href="#sobre" title="Sobre"> Sobre Nós </a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Barra de navegação do site -->
+  <header>
+    <!-- Posicionamento e setagem da logo -->
+    <h1 class="float-l">
+      &nbsp; &nbsp; &nbsp; &nbsp;<a href="index.html"><img src="img/logo.png" alt="" width="100px"></a>
+    </h1>
+
+    <input type="checkbox" id="control-nav" />
+    <label for="control-nav" class="control-nav"></label>
+    <label for="control-nav" class="control-nav-close"></label>
+
+    <!-- Posicionamento da lista de links do site -->
+    <nav class="float-r">
+      <ul class="list-auto">
+        <li>
+          <a href="index.html" title="Inicio"> Inicio </a>
+        </li>
+        <li>
+          <a href="#projeto" title="Projeto"> Projeto </a>
+        </li>
+        <li>
+          <a href="#produto" title="Produto"> Produto </a>
+        </li>
+        <!--
+        <li>
+          <a href="login.html" title="Login"> Login </a>
+        </li>
+        <li>
+          <a href="cadastro.html" title="Cadastro"> Cadastro </a>
+        </li>
+      -->
+        <li>
+          <a href="simulador.html" title="Simulador"> Simulador Financeiro</a>
+        </li>
+        <li>
+          <a href="#sobre" title="Sobre"> Sobre Nós </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</head>
 
 <body>
   <!-- EXTREMAMENTE IMPORTANTE: TODAS AS AREAS DEVEM SER DIVIDIDAS EM SEÇÕES QUE OCUPAM TODA A PÁGINA
   obs: é necessário a criação e configuração de conteiners no "css/styles.css" e sections, com responsividade.-->
   <main>
-<div class="slider" id="slider">
-  <img src="img/slide-panela.jpg" alt="">
-  <!-- Area de desenvolvimento de um slider com 3 ou mais imagens relacionadas ao nosso produto ou a funccionalidades do sistema. (Esse será o inicio) -->
-</div>
-
-<!-- Area para o projeto(de modo geral o que estamos fazendo, o contexto) -->
-<div class="projeto" id="projeto">
-  <h1>Já imaginou controlar sua panela com o celular?</h1>
-    <div class="caixa">
-      <h2>Controle </h2>
-      <img src="#" alt="" class="icon">
-A panela...
+    <div class="slider" id="inicio">
+      <img src="img/iot.png" class="slider">
+      <p> Internet das Coisas</p>
+      <!-- Area de desenvolvimento de um slider com 3 ou mais imagens relacionadas ao nosso produto ou a funccionalidades do sistema. (Esse será o inicio) -->
     </div>
 
-    <div class="caixa">
-      <h2>Segurança Garantida</h2>
-      <img src="#" alt="" class="icon">
-...
+    <div class="projeto" id="projeto">
+      <div style="background-color:white; widht: 100%; height: 60px;"></div>
+      <h1>Já imaginou controlar sua panela com o celular?</h1>
+      <div class="caixa">
+        <h2>Controle </h2>
+        <div class="fotos"> <img src="teste.jpg" alt="" class="icon"></div>
+        <div class="texto"> A panela... </div>
+      </div>
+
+      <div class="caixa">
+        <h2>Segurança Garantida</h2>
+        <img src="#" alt="" class="icon">
+        ...
+      </div>
+
+      <div class="caixa">
+        <h2>Repositório de receitas</h2>
+        <img src="#" alt="" class="icon">
+        Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!
+      </div>
+
+      <div class="caixa">
+        <h2>TITULO</h2>
+        <img src="#" alt="" class="icon">
+      </div>
     </div>
 
-    <div class="caixa">
-      <h2>Repositório de receitas</h2>
-      <img src="#" alt="" class="icon">
-Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!
+    <!-- Area para o Produto(PaIoTnela) -->
+    <div class="produto" id="produto">
+      <div style="background-color:rgb(71, 99, 255); widht: 100%; height: 60px;"></div>
+      <h1>Paiotnela</h1>
+
+      <img src="#" alt="">
+      <h2>Uma panela ligada à internet das coisas</h2>
+      <p>A PaIoTnela é uma panela ligada à internet das coisas, um dispositivo a ser acrescentado à casa inteligente,
+        tonando mais prático o cotidiano do consumidor. Através de um aplicativo, é possível controlar o tempo de
+        cozimento para ser mais rápido ou até estendido, de acordo com as necessidades do usuário, que pode inclusive
+        não estar em casa no momento de ligar e desligar sua panela.</p>
     </div>
 
-    <div class="caixa">
-      <h2>TITULO</h2>
-      <img src="#" alt="" class="icon">
-    </div>
-</div>
+    <div class="grupo" id="grupo">
+      <ul>
+        <li>
+          <h3>Eduardo</h3>
+          <img src="img/membro-eduardo.jpeg" alt="" class="foto">
+        </li>
 
-<!-- Area para o Produto(PaIoTnela) -->
-<div class="produto" id="produto">
-  <img src="#" alt="">
-  <h1>Paiotnela</h1>
-  <h2>Uma panela ligada à internet das coisas</h2>
-  <p>A PaIoTnela é uma panela ligada à internet das coisas, um dispositivo a ser acrescentado à casa inteligente, tonando mais prático o cotidiano do consumidor. Através de um aplicativo, é possível controlar o tempo de cozimento para ser mais rápido ou até estendido, de acordo com as necessidades do usuário, que pode inclusive não estar em casa no momento de ligar e desligar sua panela.</p>
-</div>
-<div class="grupo" id="grupo">
-  <ul>
-        <li><h3>Eduardo</h3>
-        <img src="img/membro-eduardo.jpeg" alt="" class="foto">
-      </li>
+        <li>
+          <h3>Larissa</h3>
+          <img src="img/membro-larissa.jpeg" alt="" class="foto">
+        </li>
 
-        <li>  <h3>Larissa</h3>
-        <img src="img/membro-larissa.jpeg" alt="" class="foto">
-      </li>
+        <li>
+          <h3>Michelle</h3>
+          <img src="img/membro-michelle.jpeg" alt="" class="foto">
+        </li>
 
-        <li>  <h3>Michelle</h3>
-        <img src="img/membro-michelle.jpeg" alt="" class="foto">
-      </li>
+        <li>
+          <h3>Paulo</h3>
+          <img src="img/membro-paulo.jpeg" alt="" class="foto" style="background: red;">
+        </li>
 
-        <li><h3>Paulo</h3>
-      <img src="img/membro-paulo.jpeg" alt="" class="foto" style="background: red;">
-    </li>
+        <li>
+          <h3>Regino</h3>
+          <img src="img/membro-regino.jpeg" alt="" class="foto" style="background: pink;">
+        </li>
 
-        <li>  <h3>Regino</h3>
-        <img src="img/membro-regino.jpeg" alt="" class="foto" style="background: pink;">
-      </li>
-
-        <li>  <h3>William</h3>
-        <img src="img/membro-william.jpeg" alt="" class="foto" style="background: white;">
-      </li>
-        <li>  <h3>William</h3>
-        <img src="img/membro-william.jpeg" alt="" class="foto" style="background: white;">
-      </li>
+        <li>
+          <h3>William</h3>
+          <img src="img/membro-william.jpeg" alt="" class="foto" style="background: white;">
+        </li>
       </ul>
-</div>
-</main>
+    </div>
+  </main>
 
-<footer>
-
-</footer>
 </body>
 
 </html>
