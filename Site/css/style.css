@@ -40,7 +40,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     right: 0;
     left: 0;
     border-bottom: 1px solid #ccc;
-    background: #ECECEC;
+    background: #4763ff;
     z-index: 2;
   }
   /* detalhes das letras h1 dentro do header, da tag a e das listas
@@ -68,7 +68,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   header li a {
     display: block;
     padding: 0 10px;
-    color: #999;
+    color: #87cefa;
     font-size: 16px;
     line-height: 30px;
     text-decoration: none;
