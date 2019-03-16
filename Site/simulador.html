@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simulador Financeiro</title>
+    <link rel="stylesheet" type="text/css" href="css/simulador.css">
 </head>
+
 <body>
-    
-    <form>
-        Tempo em minutos: <input type="number" id="tempo"><br>
-        Preço do botijão: <input type="number" id="precoBotijao"><br>
-        <Select id="botijao">
-            <option value="">-Selecione o peso do Gás-</option>
-            <option value="13"> 13KG </option>
-            <option value="20"> 20KG </option>
-            <option value="45"> 45KG </option>
-            <option value="90"> 90KG </option>
-        </Select><br>
-    </form><br>
-    <button type="button" onclick="calculo()"> Calcular valores </button>
-    <br><br>
-    <div id="mostrar"></div>
-    
+    <div class='back'>
+        <div class='borda'>
+                <h2> Simulador Financeiro </h2><br><br>
+                <form>
+                    Tempo em minutos: <input type="number" id="tempo"><br><br>
+                    Preço do botijão: <input type="number" id="precoBotijao"><br><br><br>
+                    Peso do botijão: <Select id="botijao">
+                        <option value="">-Selecione o peso do Gás-</option>
+                        <option value="13"> 13KG </option>
+                        <option value="20"> 20KG </option>
+                        <option value="45"> 45KG </option>
+                        <option value="90"> 90KG </option>
+                    </Select><br><br><br>
+                    <button type="button" onclick="calculo()"> Calcular valores </button>
+                    <br><br><br>
+                </form>
+        </div>
+
+        <div class='borda2'>
+            <!-- Bordas do formulário -->
+            <div> <h3> Dinheiro Gasto e Economizado: </h3> </div>
+            <div id="mostrar1"></div>
+            
+        </div>
+        <div class='borda3'>
+                <!-- Bordas do formulário -->
+                <div> <h3> Tempo Gasto e Economizado: </h3> </div>
+            <div id="mostrar2"></div>
+            </div>
+    </div>
+
+
+
+
 </body>
+
 </html>
 
 
 <script>
 
-    function calculo() {
+function calculo() {
         /*Tempo do fogo ligado em minutos*/
         var tempoLig = tempo.value;
         /*Preco do botijão*/
@@ -41,10 +63,20 @@
         // calculo do gasto com panela eletrica
         var valorEletrico = calculoDinheiro/2;
         // tempo economizado com panela eletrica
-        tempoLig = tempoLig - (tempoLig/3);
+        tempoLig = tempoLig * 60;
+        tempoLig = tempoLig - (tempoLig / 3);
+        var s = (((tempoLig/60) - parseInt(tempoLig/60)));
+        var m = tempoLig / 60;
+        var minuto = m;
+        var segundo = s*100;
+        if(segundo >= 60){
+            segundo = segundo % 60;
+        }
+        tempoLig = minuto.toFixed(0)+ " minutos e " + segundo.toFixed(0)+" segundos.";
         // envio de dados para uma div chamada 'mostrar'
-        mostrar.innerHTML = `Você gasta R$${calculoDinheiro.toFixed(2)} dentro dessas condições,
-         com a panela eletrica gastaria aprox. R$${valorEletrico.toFixed(2)} e gastaria apenas ${tempoLig} minutos.`;
+        mostrar1.innerHTML = `Você gasta: R$${calculoDinheiro.toFixed(2)}.<br>
+         PaIoTnela gasta aprox: R$${valorEletrico.toFixed(2)}`;
+        mostrar2.innerHTML = `${tempoLig}`;
     }
 
 </script>
