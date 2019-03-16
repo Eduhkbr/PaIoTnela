@@ -1,4 +1,4 @@
-Tutorial GitHub – Baixar e Receber Atualizações
+﻿Tutorial GitHub – Baixar e Receber Atualizações
 
 Após instalar a ferramenta Git Bash realizar a seguinte sequencia de passos:
 
@@ -13,9 +13,7 @@ Após instalar a ferramenta Git Bash realizar a seguinte sequencia de passos:
 Tutorial GitHub – Enviar Atualizações
 
 1.	Faça as alterações antes de enviar a atualização para o servidor remoto
-2.	Vá no Git Bash e escreva “git diff”
-3.	Espere ele enviar a atualização, pode demorar um pouco
-4.	Escreva “git add .”
-5.	Escreva “git diff” novamente
-6.	Escreva “git commit –m “mexi local”
-7.	Escreva “git push”, inform seu email e espere ser solicitada a senha, pode ser no cmd ou em um aplicativo externo.
+2.	Escreva “git add .”
+3.	Escreva “git diff” novamente
+4.	Escreva “git commit –m “mexi local”
+5.	Escreva “git push”, inform seu email e espere ser solicitada a senha, pode ser no cmd ou em um aplicativo externo.
