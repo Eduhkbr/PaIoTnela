@@ -1,3 +1,4 @@
+/* Fundo de todo o site, por tras das grids e divs*/
 main {
   overflow: hidden;
  display: grid;
@@ -12,6 +13,7 @@ main {
  "grupo"
 }
 
+/*comportamento do H1 dentro da main*/
 main h1 {
   overflow: hidden;
   background: rgb(71, 99, 255);
@@ -20,7 +22,7 @@ main h1 {
   max-height: 10vh;
   padding-left: 5%;
 }
-
+/*Comportamento do H2 dentro da main*/
 main h2 {
   padding: 2vh;
 }
@@ -32,30 +34,12 @@ main h2 {
   display: flex;
   flex-wrap: wrap;
 }
-
+/* caixa de itens da grid de projetos*/
 .caixa {
   width: 50vw;
   height: 50vh;
 }
 
-.arqcomp {
-  background: #b8860b;
-}
-
-.alg {
-  background: #87cefa;
-
-}
-
-.bd {
-  background: #cd7f32;
-
-}
-
-.outros {
-  background: #f08080;
-
-}
 
 
 /* AREA DE PROJETOS */
@@ -126,10 +110,10 @@ main h2 {
   width: 100%;
   line-height: 3vh;
   font-weight: 700;
-text-align: center;
-margin: 1vh;
-background: rgb(71, 99, 255);
-color: white;
+  text-align: center;
+  margin: 1vh;
+  background: rgb(71, 99, 255);
+  color: white; 
 }
 
 .foto {
