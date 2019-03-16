@@ -1,19 +1,18 @@
-int pinoSensor = 5; // Saido do sensor (porta) A5
-int valorLido = 0; //Variavel axiliar
+﻿int pinoSensor = 5; // Saido do sensor (porta) A5
+int valorLido = 0; //Variavel auxiliar
 float temperatura = 0; // variavel que armazena a temperatura
 int linha = 0; // variavel que se refere as linhas do excel
 
 void setup(){
 Serial.begin(9600);//inicia a comunicaçao serial a 9600 bauds
-Serial.println("Temperatura");//nomeia a colun
+Serial.println("Temperatura");//nomeia a coluna
 }
 void loop(){
   valorLido = analogRead(pinoSensor);//Leitura analogica da porta
   temperatura = (valorLido * 0.00488); //5 volts 1023 = 0,0048 precisao do A/D
   temperatura = temperatura * 100;//converte milivolts para celsius
   linha++;//incrementa linha que a leitura pule linha
-  Serial.print(temperatura);
-  Serial.println(" C");
+  Serial.println(temperatura);
 
   if(linha > 100){
     linha = 0;
