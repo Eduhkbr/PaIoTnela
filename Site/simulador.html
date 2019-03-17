@@ -67,8 +67,8 @@
                     <button type="button" onclick="calculo()" class="btc"> Calcular valores </button>
                     <br><br><br>
                 </form></div>  
-  <div class="item4"><h3> Dinheiro Gasto e Economizado: </h3><div id="mostrar1"></div></div>
-  <div class="item2"><h3> Tempo Gasto e Economizado: </h3><div id="mostrar2"></div></div>
+  <div class="item4"><h3> Dinheiro Gasto e Economizado: </h3> <br> <div id="mostrar1"></div></div>
+  <div class="item2"><h3> Tempo Gasto com a PaIoTnela: </h3> <br> <div id="mostrar2"></div></div>
 
 </div>
 
@@ -103,7 +103,7 @@ function calculo() {
         // envio de dados para uma div chamada 'mostrar'
         mostrar1.innerHTML = `Você gasta: R$${calculoDinheiro.toFixed(2)}.<br>
          PaIoTnela gasta aprox: R$${valorEletrico.toFixed(2)}`;
-        mostrar2.innerHTML = `${tempoLig}`;
+        mostrar2.innerHTML = `${tempoLig}. <br> `;
     }
 
 </script>
