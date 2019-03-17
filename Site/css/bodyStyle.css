@@ -1,16 +1,17 @@
+
 /* Fundo de todo o site, por tras das grids e divs*/
 main {
   overflow: hidden;
  display: grid;
- grid-template-columns: repeat(4, 100vw);
- grid-template-rows: repeat(4, 100vh);
  align-items: center;
  background: #87cefa;
  grid-template-areas:
  "slider"
  "projeto"
  "produto"
- "grupo"
+ "grupo";
+ /* por definição, as áreas do grid ocuparão toda a largura da tela, 
+ como é exatamente isso que queremos, não precisamos especificar a largura */
 }
 
 /*comportamento do H1 dentro da main*/
@@ -32,44 +33,91 @@ main h2 {
   grid-area: projeto;
   width: 100%;
   background: #fafafa;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* o que estiver dentro de projetos, vai se comportar como flex (no caso, as caixas) */
+  flex-wrap: wrap; /* diz ao navegador que, se a tela diminuir, pode pular os elementos para linha debaixo */
 
 }
-/*grids da area de projetos*/
+
+/* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
+.projeto h1 {
+  background: rgb(13, 92, 129);
+  color: white; /* cor das LETRAS branca */
+  font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
+  font-weight: 100; /* deixa as letras mais finas ou grossas */
+  width: 100%; /* em relação à mãe, que seria a div projeto */
+  font-size: 1.5em; /* tamanho da fonte */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase;  /* deixa as letras em maiúsculas */
+}
+
+
 .caixa {
-  border: 1px solid black;
-  overflow: hidden;
-  width: 49.5vw;
-  height: 50vh;
+  flex: 1; /* ocupa o espaço inteiro que a tela tiver */
+  padding: 5vh; /* da espaço entre os elementos e as bordas da caixa */
+  background: #01b7c5;
+  /* display: flex; o que esta dentro da caixa se comportará como flex */
+  display: grid; /* o que estiver dentro da caixa se comportará como grid */
+  grid-template-areas: 
+  "imagem"
+  "titulo"
+}
+
+/* título de cada uma das caixas */
+.caixa h2 {
+  grid-area: titulo;
+  width: 100%; /* em relação à mãe, que seria a div caixa */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+
+  font-size: 1em; /* tamanho da fonte */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase; /* deixa as letras em maiúsculas */
 }
 
 /*Comportamento da imagem dentro da caixa*/
 .caixa img {
-
- max-width: 50vw;
+  grid-area: imagem;
+   max-height: 20vh;
+  justify-self: center; /* Justifica o item do grid em relação ao eixo x (horizontal). Justifica em relação a célula. */
+  align-self: center; /* Justifica o item do grid em relação ao eixo y (vertical). Alinha em relação a célula. */
 }
 
-/*Comportamento do H2 dentro da classe projeto*/
-.projeto h2 {
-  background: rgb(85, 176, 218);
-  width: 100%;
-  font-size: 1.5em;
-  max-height: 5vh;
-  padding: 1vh;
-  text-align: center;
-  text-transform: uppercase;
+.caixa:hover {
+
 }
 
 
 /* AREA SOBRE O PRODUTO */
 .produto {
   grid-area: produto;
-  background: rgb(85, 176, 218);
-  width: 100%;
-  height: 100%;
-  min-width: 50vw;
-  min-height: 50vh;
+  background: white;
+  grid-template-areas: /* como as coisas se comportarão dentro da área* "produto" */
+  "img tit"
+  "img conteudo"
+
+}
+
+.produto img {
+  grid-area: img;
+  max-width:50vh;
+  padding: 2vh;
+}
+
+.produto h1 {
+  grid-area: tit;
+  width: 100%; /* em relação à mãe, que seria a div caixa */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+
+  font-size: 1em; /* tamanho da fonte */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase; /* deixa as letras em maiúsculas */
+}
+
+.produto p {
+  grid-area: conteudo;
 }
 
 
@@ -80,13 +128,12 @@ main h2 {
 }
 /*Comportamento do ul dentro da classe grupo*/
 .grupo ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  align-content: space-between;
-  width: 100vw;
+  display: flex; /* todos os elementos da lista se comportarão como flex */
+  flex-wrap: wrap; /* quando a tela diminuir, os elementos vão pular para linha debaixo */
+  justify-content: center; /* alinha itens horizontalmente no centro */
+  align-items: center; /* alinha itens verticalmente no centro */
+  list-style: none; /* retira o estilo padrão do mavegador da lista - no caso tira a bolinha de cada item (li) - no caso, casa item é um membro do grupo */
+  align-content: space-between; /* da um espaço entre cada membro */
 }
 /*Comportamento da li dentro da classe grupo*/
 .grupo li {
@@ -95,16 +142,15 @@ main h2 {
 }
 /*Comportamento do H3 dentro da classe grupo*/
 .grupo h3 {
-  width: 100%;
   line-height: 3vh;
   font-weight: 700;
   text-align: center;
   margin: 1vh;
-  background: rgb(71, 99, 255);
-  color: white; 
+    color: white; 
 }
 
 .foto {
-  border-radius: 50%;
-  max-width: 20vh;
+  border-radius: 50%; /* borda da imagem em 50%, é o que transforma ela em um círculo! */
+  max-width: 20vh; /* tamanho máximo de largura das imagens, assim mesmo se elas forem muito grandes, se manterão proporcionais à 20/100 do tamanhod da tela do usuário */
+  min-height: 20vh; /* altura mínima das imagens - assim a gente faz elas ficarem todas do mesmo tamanho */
 }

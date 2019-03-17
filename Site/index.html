@@ -11,95 +11,80 @@
   <!-- Importação do CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/bodyStyle.css">
+</head>
+<body>
+
 
   <!-- Barra de navegação do site -->
   <header>
-    <!-- Posicionamento e setagem da logo -->
-    <h1 class="float-l">
-      &nbsp; &nbsp; &nbsp; &nbsp;<a href="index.html"><img src="img/logo.png" alt="" width="100px"></a>
-    </h1>
-
-    <input type="checkbox" id="control-nav" />
-    <label for="control-nav" class="control-nav"></label>
-    <label for="control-nav" class="control-nav-close"></label>
-
-    <!-- Posicionamento da lista de links do site -->
-    <nav class="float-r">
-      <ul class="list-auto">
-        <li>
-          <a href="index.html" title="Inicio"> Inicio </a>
-        </li>
-        <li>
-          <a href="#projeto" title="Projeto"> Projeto </a>
-        </li>
-        <li>
-          <a href="#produto" title="Produto"> Produto </a>
-        </li>
-        <!-- Manter sem login e cadastro até o fim da sprint
-        <li>
-          <a href="login.html" title="Login"> Login </a>
-        </li>
-        <li>
-          <a href="cadastro.html" title="Cadastro"> Cadastro </a>
-        </li>
-      -->
-        <li>
-          <a href="simulador.html" title="Simulador"> Simulador Financeiro</a>
-        </li>
-        <li>
-          <a href="#sobre" title="Sobre"> Sobre Nós </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-</head>
-
-<body>
+      <!-- Posicionamento e setagem da logo -->
+      <h1 class="float-l">
+        &nbsp; &nbsp; &nbsp; &nbsp;<a href="index.html"><img src="img/logo.png" alt="" width="100px"></a>
+      </h1>
+  
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+  
+      <!-- Posicionamento da lista de links do site -->
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li><a href="index.html" title="Inicio"> Inicio </a></li>
+          <li><a href="#projeto" title="Projeto"> Projeto </a></li>
+          <li><a href="#produto" title="Produto"> Produto </a></li>
+          <!-- Manter sem login e cadastro até o fim da sprint
+          <li><a href="login.html" title="Login"> Login </a></li>
+          <li><a href="cadastro.html" title="Cadastro"> Cadastro </a></li>-->
+          <li><a href="simulador.html" title="Simulador"> Simulador Financeiro</a></li>
+          <li><a href="#sobre" title="Sobre"> Sobre Nós </a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    
   <!-- EXTREMAMENTE IMPORTANTE: TODAS AS AREAS DEVEM SER DIVIDIDAS EM SEÇÕES QUE OCUPAM TODA A PÁGINA
   obs: é necessário a criação e configuração de conteiners no "css/styles.css" e sections, com responsividade.-->
   <!-- Main é praticamente o background com tamanhos setados-->
   <main>
     
-    <!-- Area de desenvolvimento de um slider com 3 ou mais imagens relacionadas ao nosso produto ou a funccionalidades do sistema. (Esse será o inicio) -->
-    <div class="slider" id="inicio">
-      <img src="img/iot.png" style="padding-left: 80px;">
+    <div class="slider" id="inicio"> 
+    <!-- ID: o nome que esta em cada link do menu com uma hashtag # direciona para as id de cada div -->
+      <img src="img/iot.png" alt="rede de iot">
+      <img src="img/img-panela.jpg" alt="panela e utensilios">
       <p> Internet das Coisas</p>
+     <!-- Area de desenvolvimento de um slider com 3 ou mais imagens relacionadas ao nosso produto ou a funccionalidades do sistema. (Esse será o inicio) -->
     </div>
-    <!-- Area de desenvolvimento de detalhes do projeto-->
-    <!-- Sugestão do Edu: Colocar imagens dentro das caixas, que ao passar o mouse por cima deixam uma camada preta meio transparente por cima da imagem
-         onde fica o texto com a fonte branca explicando sobre aquela imagem-->
+
     <div class="projeto" id="projeto">
-      <div style="background-color:rgb(71, 99, 255); width: 100%; height: 60px;"></div>
-      <h1>Já imaginou controlar sua panela com o celular?</h1>
+
+      <!-- <h1>Já imaginou controlar sua panela com o celular?</h1> -->
+
       <div class="caixa">
-        <h2>Controle </h2><img src="teste.jpg" alt="" class="icon">
+        <img src="img/icon-fogo.png" alt="" class="icon">
+        <h2>Segurança </h2>
         <div class="texto"> A panela... </div>
       </div>
 
       <div class="caixa">
-        <h2>Segurança Garantida</h2>
-        <img src="#" alt="" class="icon">
+        <h2>Precisão</h2>
+        <img src="img/icon-timer.png" alt="" class="icon">
         ...
       </div>
 
       <div class="caixa">
         <h2>Repositório de receitas</h2>
-        <img src="#" alt="" class="icon">
-        Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!
-      </div>
+        <img src="img/icon-receitas.png" alt="" class="icon">
+        <p>Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!</p>
 
-      <div class="caixa">
-        <h2>TITULO</h2>
-        <img src="#" alt="" class="icon">
       </div>
     </div>
 
     <!-- Area para o Produto(PaIoTnela) -->
     <div class="produto" id="produto">
-      <div style="background-color:rgb(71, 99, 255); width: 100%; height: 60px;"></div>
       <h1>Paiotnela</h1>
 
       <img src="#" alt="">
+      <img src="img/Desenho de Solução.jpg" alt="">
       <h2>Uma panela ligada à internet das coisas</h2>
       <p>A PaIoTnela é uma panela ligada à internet das coisas, um dispositivo a ser acrescentado à casa inteligente,
         tonando mais prático o cotidiano do consumidor. Através de um aplicativo, é possível controlar o tempo de
@@ -110,35 +95,36 @@
     <!-- Sugestão: Desenvolvimento da missão, visão e valores, colocar acima das fotos dos membros do grupo para a area de grupo se tornar a soma
          de Sobre + Grupo, reduzindo a necessidade da criação de uma nova página logo abaixo-->
     <div class="grupo" id="grupo">
-      <ul>
+      <ul> 
+        <!-- UL: indica o início de uma lista de bolinhas, no nosso caso, ela vai funcionar lá no CSS como flex -->
         <li>
-          <h3>Eduardo</h3>
           <img src="img/membro-eduardo.jpeg" alt="" class="foto">
+          <h3>Eduardo Kauan</h3>
         </li>
 
         <li>
-          <h3>Larissa</h3>
-          <img src="img/membro-larissa.jpeg" alt="" class="foto">
+          <img src="img/membro-larissa.jpg" alt="" class="foto">
+          <h3>Larissa Hessel</h3>
         </li>
 
         <li>
-          <h3>Michelle</h3>
-          <img src="img/membro-michelle.jpeg" alt="" class="foto">
+          <img src="img/membro-michelle.jpg" alt="" class="foto">
+          <h3>Michelle Azevedo</h3>
         </li>
 
         <li>
-          <h3>Paulo</h3>
-          <img src="img/membro-paulo.jpeg" alt="" class="foto" style="background: red;">
+          <img src="img/membro-paulo.jpg" alt="" class="foto">
+          <h3>Paulo Costa</h3>
         </li>
 
         <li>
-          <h3>Regino</h3>
-          <img src="img/membro-regino.jpeg" alt="" class="foto" style="background: pink;">
+          <img src="img/membro-regino.jpg" alt="" class="foto">
+          <h3>Regino Trindade</h3>
         </li>
 
         <li>
-          <h3>William</h3>
-          <img src="img/membro-william.jpeg" alt="" class="foto" style="background: white;">
+          <img src="img/membro-william.jpeg" alt="" class="foto">
+          <h3>William Marques</h3>
         </li>
       </ul>
     </div>
