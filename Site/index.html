@@ -11,6 +11,7 @@
   <!-- Importação do CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/bodyStyle.css">
+  <link rel="stylesheet" href="functions.js">
 </head>
 <body>
 
@@ -57,26 +58,40 @@
 
     <div class="projeto" id="projeto">
 
-      <!-- <h1>Já imaginou controlar sua panela com o celular?</h1> -->
+      <h1>Já imaginou controlar sua panela com o celular?</h1>
 
       <div class="caixa">
         <img src="img/icon-fogo.png" alt="" class="icon">
         <h2>Segurança </h2>
-        <div class="texto"> A panela... </div>
-      </div>
+       <!-- Abaixo vem o HTML que aparecerá quando passar o mouse -->
+        <div class="overlay"></div>
+            <div class="info">
+                <img src="img/icon-fogo.png" alt="" class="icon"> <!-- A imagem que ficará por trás-->
+                <p>Algum texto aqui</p> 
+              </div>
+            </div>
 
       <div class="caixa">
-        <h2>Precisão</h2>
         <img src="img/icon-timer.png" alt="" class="icon">
-        ...
-      </div>
+        <h2>Precisão</h2>
+<!-- Abaixo vem o HTML que aparecerá quando passar o mouse -->
+<div class="overlay"></div>
+<div class="info">
+    <img src="img/icon-fogo.png" alt="" class="icon"> <!-- A imagem que ficará por trás-->
+    <p>Algum texto aqui</p> 
+  </div>
+</div>
 
       <div class="caixa">
         <h2>Repositório de receitas</h2>
         <img src="img/icon-receitas.png" alt="" class="icon">
-        <p>Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!</p>
-
-      </div>
+        <!-- Abaixo vem o HTML que aparecerá quando passar o mouse -->
+<div class="overlay"></div>
+<div class="info">
+    <img src="img/icon-fogo.png" alt="" class="icon"> <!-- A imagem que ficará por trás-->
+    <p>Consulte nosso banco de dados através do aplicativo e garanta a quantidade certa e um sabor delicioso!</p>
+  </div>
+</div>
     </div>
 
     <!-- Area para o Produto(PaIoTnela) -->
