@@ -106,7 +106,6 @@ text-align: center;
 /* AREA SOBRE O PRODUTO */
 .produto {
   grid-area: produto;
-  background: white;
 }
 
 /* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
@@ -123,14 +122,30 @@ text-align: center;
   text-transform: uppercase;  /* deixa as letras em maiúsculas */
 }
 
+.flex-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 .produto img {
-  max-width:50vh;
+  width: 40vh;
+  height: 40vh;
   padding: 2vh;
 }
 
 .produto p {
-  grid-area: conteudo;
+  width: 40vh;
+  height: 40vh;
+  padding: 2vh;
+  text-align: justify;
+  align-content: center;
+
 }
+
+
+
 
 
 /* AREA SOBRE O GRUPO */
