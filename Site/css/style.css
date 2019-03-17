@@ -30,6 +30,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+  background-image: url(../img/wll.jpg);
+  background-repeat: no-repeat;
+
   }
   
   /* Barra de navegação da index com responsividade */
@@ -42,6 +45,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     border-bottom: 1px solid #ccc;
     background: #4763ff;
     z-index: 2;
+    
   }
   /* detalhes das letras h1 dentro do header, da tag a e das listas
      lembrando que só funcionam dentro da header por serem tags "filhas" dela */

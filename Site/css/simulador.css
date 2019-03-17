@@ -1,76 +1,58 @@
-/* Configuração do fundo da tela de login e cadastro */
-.back{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    opacity: .7;
-    filter: alpha(opacity=40);
-    background-color: rgba(71,99,255, 0.8);
-}
 
-.borda {
-    border: 2px solid;
-    text-align: center;
-    size: relative;
-    padding-bottom: 60px;
-    padding-top: 80px;
-    padding-right: 80px;
-    padding-left: 80px;
-    margin-top: 10%;
-    margin-left: 8%;
-    margin-right: 32%;
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.borda2 {
-  border: 2px solid;
-  text-align: center;
-  size: relative;
-  padding-bottom: 60px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  max-width: 40%;
-  margin-top: 10%;
-  margin-left: 50%;
-  background-image: url(../img/fundo.jpg);
+ body{
+  background-image: url(../img/wll.jpg);
   background-repeat: no-repeat;
-  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+.item2 { grid-area: menu; padding: 10px}
+.item3 { grid-area: main;}
+.item4 { grid-area: right; padding: 10px;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'main main main right right right'
+    'main main main right right right'
+    'main main main menu menu menu'
+    'main main main menu menu menu';
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10%;
+  background-color:  #4763ff;
 }
 
-.borda2 div{
-    width: 100%;
-    height: 20%;
-    color: blue;
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 20px;
 }
+.btc{
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 
-.borda3 {
-    border: 2px solid;
-    text-align: center;
-    size: relative;
-    padding-bottom: 60px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-top: 25%;
-    margin-left: 50%;
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    position: absolute;
-  }
+}
+.btc:hover{
+  opacity: 0.8;
+  background-color: orange;
+  color: black;
 
-  .borda3 div{
-    width: 100%;
-    height: 20%;
-    color: blue;
-  }
+}
+.inp, select {
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 /* Personalização dos botões de envio */
 input[type="button"]{
     width: 30%!important; /* tamanho*/

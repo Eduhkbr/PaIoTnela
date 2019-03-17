@@ -7,45 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simulador Financeiro</title>
     <link rel="stylesheet" type="text/css" href="css/simulador.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 </head>
 
 <body>
-    <div class='back'>
-        <div class='borda'>
-                <h2> Simulador Financeiro </h2><br><br>
+    <header>
+    <!-- Posicionamento e setagem da logo -->
+    <h1 class="float-l">
+      &nbsp; &nbsp; &nbsp; &nbsp;<a href="index.html"><img src="img/logo.png" alt="" width="100px"></a>
+    </h1>
+
+    <input type="checkbox" id="control-nav" />
+    <label for="control-nav" class="control-nav"></label>
+    <label for="control-nav" class="control-nav-close"></label>
+
+    <!-- Posicionamento da lista de links do site -->
+    <nav class="float-r">
+      <ul class="list-auto">
+        <li>
+          <a href="index.html" title="Inicio"> Inicio </a>
+        </li>
+        <li>
+          <a href="#projeto" title="Projeto"> Projeto </a>
+        </li>
+        <li>
+          <a href="#produto" title="Produto"> Produto </a>
+        </li>
+        <!-- Manter sem login e cadastro até o fim da sprint
+        <li>
+          <a href="login.html" title="Login"> Login </a>
+        </li>
+        <li>
+          <a href="cadastro.html" title="Cadastro"> Cadastro </a>
+        </li>
+      -->
+        <li>
+          <a href="simulador.html" title="Simulador"> Simulador Financeiro</a>
+        </li>
+        <li>
+          <a href="#sobre" title="Sobre"> Sobre Nós </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="grid-container">
+  <div class="item3"> <h2> Simulador Financeiro </h2><br><br>
                 <form>
-                    Tempo em minutos: <input type="number" id="tempo"><br><br>
-                    Preço do botijão: <input type="number" id="precoBotijao"><br><br><br>
-                    Peso do botijão: <Select id="botijao">
+                    Tempo em minutos: <br><input type="number" id="tempo" class="inp"><br><br>
+                    Preço do botijão: <br><input type="number" id="precoBotijao" class="inp"><br><br><br>
+                    Peso do botijão: <br><Select id="botijao">
                         <option value="">-Selecione o peso do Gás-</option>
                         <option value="13"> 13KG </option>
                         <option value="20"> 20KG </option>
                         <option value="45"> 45KG </option>
                         <option value="90"> 90KG </option>
                     </Select><br><br><br>
-                    <button type="button" onclick="calculo()"> Calcular valores </button>
+                    <button type="button" onclick="calculo()" class="btc"> Calcular valores </button>
                     <br><br><br>
-                </form>
-        </div>
+                </form></div>  
+  <div class="item4"><h3> Dinheiro Gasto e Economizado: </h3><div id="mostrar1"></div></div>
+  <div class="item2"><h3> Tempo Gasto e Economizado: </h3><div id="mostrar2"></div></div>
 
-        <div class='borda2'>
-            <!-- Bordas do formulário -->
-            <div> <h3> Dinheiro Gasto e Economizado: </h3> </div>
-            <div id="mostrar1"></div>
-            
-        </div>
-        <div class='borda3'>
-                <!-- Bordas do formulário -->
-                <div> <h3> Tempo Gasto e Economizado: </h3> </div>
-            <div id="mostrar2"></div>
-            </div>
-    </div>
-
-
-
+</div>
 
 </body>
-
 </html>
 
 
