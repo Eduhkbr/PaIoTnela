@@ -1,10 +1,16 @@
 CSS:
 
+Guia de css Flexbox: https://origamid.com/projetos/flexbox-guia-completo/
+Guia de css Grid: https://www.origamid.com/projetos/css-grid-layout-guia-completo/
+
+Compreendendo o position relative/absolute...
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
 afim de tornar o site responsivo com menos linhas de código, utilizar medidas escaláveis como:
 
-fontes:"em" ao invés de "px"
+fontes:"em" ou "vw" ao invés de "px"
 
-height: "vh" ao invés de px ou até mesmo %
+"vh" ao invés de px ou até mesmo %
 width: "vw" ao invés  px ou até mesmo % 
 (ambos se baseiam no tamanho da tela que o usuário esta utilizando, sendo 100vh ou 100vw a medida que ocupa tela cheia)
 
