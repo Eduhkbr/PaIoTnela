@@ -151,7 +151,7 @@ text-align: center;
 /* AREA SOBRE O GRUPO */
 .grupo {
   grid-area: grupo;
-  
+  overflow: hidden;
 }
 
 .grupo h1 {
