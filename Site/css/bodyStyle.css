@@ -165,6 +165,7 @@ text-align: center;
   padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
   text-align: center; /* centraliza o texto */
   text-transform: uppercase;  /* deixa as letras em maiúsculas */
+  overflow: hidden;
 }
 /*Comportamento do ul dentro da classe grupo*/
 .grupo ul {
@@ -174,14 +175,17 @@ text-align: center;
   align-items: center; /* alinha itens verticalmente no centro */
   list-style: none; /* retira o estilo padrão do mavegador da lista - no caso tira a bolinha de cada item (li) - no caso, casa item é um membro do grupo */
   align-content: space-between; /* da um espaço entre cada membro */
+  overflow: hidden;
 }
 /*Comportamento da li dentro da classe grupo*/
 .grupo li {
+  overflow: hidden;
   padding: 3vh;
   min-width: 20vh;
 }
 /*Comportamento do H3 dentro da classe grupo*/
 .grupo h3 {
+  overflow: hidden;
   line-height: 3vh;
   font-weight: 700;
   text-align: center;
